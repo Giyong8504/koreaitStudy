@@ -9,6 +9,30 @@ aspectjweaver
 factorial
     !5 -> 5 * 4 * 3 * 2 * 1
 
+### 참고) BufferedInputStream
+
+```
+class BufferedInputStream extends InputStream {
+
+	private InputStream in;
+	
+	public BufferedInputStream(InputStream in) {
+		this.in = in;
+	}
+	
+	public int read() {
+		
+		// 버퍼 기능 관련 코드...  - 추가 공통 기능 
+		
+		int ch = in.read(); // 핵심 기능 
+		
+		// 버퍼 기능 관련 코드... - 추가 공통 기능 
+		
+		return ch;
+	}
+}
+```
+
 <br>
 
 ## 2. AOP
